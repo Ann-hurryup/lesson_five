@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Таблица данных</title>
+<meta charset="utf-8" />
+</head>
+<body>
+<?php
+$array= [
+    [
+        'item' => "Товар1",
+        'description' => "Описание товара 1",
+        'price' => 100,
+    ],
+    [
+        'item' => "Товар2",
+        'description' => "Описание товара 2",
+        'price' => 200,
+    ],
+    [
+        'item' => "Товар3",
+        'description' => "Описание товара 3",
+        'price' => 300,
+    ]
+    ];
+    ?>
+<?php foreach($array as $item) : ?>
+<table>
+  <tr>
+  <?php foreach($item as $key => $value) : ?>
+    <th>
+    <?=key ?>
+    </th>
+    <?php endforeach; ?>
+  </tr>
+  <tr>
+  <?php foreach($item as $key => $value) : ?>
+    <td>
+    <?=value ?>
+    </td>
+    <?php endforeach; ?>
+  </tr>
+</table>
+<?php endforeach; ?>
+</body>
+</html>
